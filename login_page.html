@@ -4,10 +4,24 @@
 <style type="text/css" media="screen">@import "../../themes/css/jqtouch.css";</style>
 <script src="../../src/lib/zepto.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="../../src/jqtouch.min.js" type="text/javascript" charset="utf-8"></script>
+<!--add loginpage.css -->
 <link rel="stylesheet" type = "text/css" href = "login_page.css" />
 </head>
 
 <body>
+<!-- facebook login page blurb -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<p>
+<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="false"></div>
+</p>
 
 <form name="login"
 <p>email address:
@@ -17,7 +31,16 @@
 Password:
 <input name="password" type="text" size="30" maxlength="60">
 </p>
+<button onclick="myfunction()" >Log in using your email</button>
 </form>
+
+<div id = "nav">
+<ul>
+	<li> REGISTER </li>
+	<li> ABOUT </li>
+	<li> TERMS </li>
+</ul>
+</div>
 </body>
 
 </html>
