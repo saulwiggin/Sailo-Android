@@ -54,14 +54,19 @@ Day:<input name="Day" type="text" size="2" maxlength="2">
 Month:<input name="Month" type="text" size="2" maxlength="2">
 </p>
 <p>
-<input type="checkbox" name="certify" value="Car">I certify I am over 18 years old.
+<input type="checkbox" name="certify18" value="Car">I certify I am over 18 years old.
 </p>
 </form>
 <button onclick="myfunction()" >Register</button>
 
 <script>
 function myFunction() {
-	document.getElementById("demo").innerHTML = "Hello world!";
+	'CREATE TABLE IF NOT EXISTS entries ' +
+	' (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ' +
+	' date DATE NOT NULL PRIMARY KEY AUTOINCREMENT, ' +
+	' certify18 INTEGER NOT NULL, ' +
+	' day TEXT NOT NULL, latitude TEXT NOT NULL);'
+	<!-- add other values for sql -->
 }
 </script>
 <?php
