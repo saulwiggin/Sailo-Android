@@ -24,10 +24,42 @@ Re-Password:
 <input name="re-password" type="text" size="30" maxlength="60">
 </p>
 <p>
-<input type="register" />
+<select name="DOB">
+<option value="volvo">1996</option>
+<option value="saab">1995</option>
+<option value="fiat" selected>1994</option>
+<option value="audi">1993</option>
+<option value="volvo">1992</option>
+<option value="saab">1991</option>
+<option value="fiat" selected>1990</option>
+<option value="audi">1989</option>
+<option value="volvo">1988</option>
+<option value="saab">1987</option>
+<option value="fiat" selected>1986</option>
+<option value="audi">1985</option>
+<option value="volvo">1984</option>
+<option value="saab">1983</option>
+<option value="fiat" selected>1982</option>
+<option value="audi">1981</option>
+<option value="volvo">1980</option>
+<option value="saab">1979</option>
+<option value="fiat" selected>1978</option>
+<option value="audi">1977</option>
+</select>
+Day:<input name="Day" type="text" size="2" maxlength="2">
+Month:<input name="Month" type="text" size="2" maxlength="2">
+</p>
+<p>
+<input type="checkbox" name="certify" value="Car">I certify I am over 18 years old.
 </p>
 </form>
+<button onclick="myfunction()" >Register</button>
 
+<script>
+function myFunction() {
+	document.getElementById("demo").innerHTML = "Hello world!";
+}
+</script>
 <?php
 $email_to = "saulwiggin@googlemail.com";
 $email_subject = "E-list signup";
