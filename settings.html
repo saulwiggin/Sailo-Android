@@ -1,10 +1,19 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+<link rel="stylesheet" type = "css"
+href = "android.css" />
 </head>
 
 <body>
-<input type="button" value="Back" onclick="goBack()" Home />
+<div id="background" style="background-image:url('sailo.png');opacity:0.5" id="background">
+<div="container">
+<div id="header">
+	<div id="utility">
+		<input type="button" value="Back" onclick="goBack()" Home />
+	</div>
+	</div>
+<div id="content">
 <h2> Account <h2>
 <p>
 <input type="checkbox" name="certify18" value="Car">Show my current location automatically
@@ -16,10 +25,14 @@
 <input type="checkbox" name="female" value="Car">Male
 
 <h2> My Profile </h2>
-<img src="profile_pic.jpg" alt="Mountain View" style="width:304px;height:228px">Edit Details
+<p> <img src="profile_pic.jpg" alt="Mountain View" style="width:304px;height:228px"> Edit Details <p>
+</div>
 
-<img src="exit_door.png" alt="Mountain View" style="width:304px;height:228px">
-<h2> LOG OUT </h2>
+<div id="footer">
+<h2> <img src="exit_door.png" alt="Mountain View" style="width:304px;height:228px"> LOG OUT </h2>
+</div>
+</div>
+</div>
 </body>
 
 </html>
