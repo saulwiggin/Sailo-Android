@@ -1,7 +1,12 @@
 <!doctype html>
 <html>
-<meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+
 <head>
+
+<!-- add jquery and javascript -->
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="android.js"></script>
+
  <!-- add jqtquery -->
 <style type="text/css" media="screen">@import "../../themes/css/jqtouch.css";</style>
 <script src="../../src/lib/zepto.min.js" type="text/javascript" charset="utf-8"></script>
@@ -15,23 +20,27 @@ href = "android.css" />
 <!--[if IE]>
 >link rel="stylesheet" type="text/css" href="explorer.css" media="all />
 <![endif]-->
+
+<meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
 </head>
 
-<body>
-<form action="mailto:saulwiggin@gmail.com" method="post"
-enctype="text/html" name="signup">
-<p>First Name:
-<input name = "firstname" type="text" size="30" maxlength="60">
-</p>
-<p>Last Name:
-<input name = "lastname" type="text" size="30" maxlength="60">
-</p>
-<p>password:
-<input name = "password" type="text" size="30" maxlength="60">
-</p>
-<p>
-Re-Password:
-<input name="re-password" type="text" size="30" maxlength="60">
+<body >
+<div style="background-image:url('upon_installation.png');opacity:0.5" id="background">
+	<div id="content">
+		<form action="mailto:saulwiggin@gmail.com" method="post"
+		enctype="text/html" name="signup">
+		<p>First Name:
+		<input name = "firstname" type="text" size="30" maxlength="60">
+		</p>
+		<p>Last Name:
+		<input name = "lastname" type="text" size="30" maxlength="60">
+		</p>
+		<p>password:
+		<input name = "password" type="text" size="30" maxlength="60">
+		</p>
+		<p>
+		Re-Password:
+		<input name="re-password" type="text" size="30" maxlength="60">
 </p>
 <p>
 <select name="DOB">
@@ -63,8 +72,9 @@ Month:<input name="Month" type="text" size="2" maxlength="2">
 <input type="checkbox" name="certify18" value="Car">I certify I am over 18 years old.
 </p>
 </form>
-<button onclick="myfunction()" >Register</button>
-
+<button onclick="myfunction()" style="text-align: center">Register</button>
+</div>
+</div>
 <script>
 function myFunction() {
 	'CREATE TABLE IF NOT EXISTS entries ' +
