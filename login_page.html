@@ -12,13 +12,24 @@
 <body>
 <!-- facebook login page blurb -->
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+<a href="#" onclick="doLogin();return false;">Facebook Login Button</a>
+<script src="http://connect.facebook.net/en_US/all.js"></script>
+<script>
+  FB.init({ appId: '**yourAppId**', status: true, cookie: true, xfbml : true });
+
+  function doLogin() {  
+    FB.login(function(response) {
+      if (response.session) {
+        FB.api('/me',  function(response) {
+            alert('Welcome ' + response.name);
+            alert('Full details: ' + JSON.stringify(response));
+          }
+        );
+      }
+    } , {perms:''}); 
+}
+</script>
+
 
 <p>
 <div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="false"></div>
@@ -32,7 +43,7 @@
 Password:
 <input name="password" type="text" size="30" maxlength="60">
 </p>
-<button onclick="myfunction()" >Log in using your email</button>
+<button onclick="myfunction()" > Log in using your email </button>
 </form>
 
 <div id = "footer">
