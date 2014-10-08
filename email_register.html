@@ -1,6 +1,12 @@
 <!doctype html>
 <html>
 <head>
+
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<!-- Bootstrap CSS file -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen>
+
 <meta charset="utf-8">
 <title>Email Register</title>
 <link rel="stylesheet" type = "text/css"
@@ -8,6 +14,9 @@ href = "android.css" />
 </head>
 
 <body>
+
+<div class="container-fluid">
+
 <form action="mailto:saulwiggin@gmail.com" method="post"
 enctype="text/html" name="signup">
 <p>First Name:
@@ -65,5 +74,9 @@ $email_message .= "email: ".$email."\n";
 $headers = 'From: '.$email."\r\n";
 @mail($email_to, $email_subject, $email_message, $headers);
 ?>
-
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+        <script src="jquery/jquery-2.1.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+</body>
 </html>

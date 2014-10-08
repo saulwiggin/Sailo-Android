@@ -13,21 +13,30 @@
 <div class="container-fluid">
 <!-- resize to fit to android size -->
 
-<div class="col-sm-3" style="background-color:lavender;">
+<div class="col-sm-3" style="background-image:url("login_beach.png");">
 
 <!-- Navigation Menu -->
 
 <div id="sidebar">
 
-<nav>
-    <input type="checkbox" id="toggleexpand" />
-    <label for="toggleexpand"><span>></span>
-	<span class="glyphicon glyphicon-list"> 
-    </label>
-	
-<ul>
-	 
-	<li> <span class="glyphicon glyphicon-globe"> <a href="#nowhere" title="Lorum ipsum dolor sit amet"></a> My Travel Plans </li>
+<!-- drop down nav bar  -->
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="settings.html">Home</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+<li> <span class="glyphicon glyphicon-globe"> <a href="#nowhere" title="Lorum ipsum dolor sit amet"></a> My Travel Plans </li>
 	<li> <span class="glyphicon glyphicon-retweet"> <a href="#nowhere" title="Lorum ipsum dolor sit amet"></a> Current Place </li>
 	<li> <ul> 
 		<li> <span class="glyphicon glyphicon-search"> <a href="#nowhere" title="Lorum ipsum dolor sit amet"></a> People Near Me </li>
@@ -45,7 +54,14 @@
 	</li>
 	<li> <a href="#nowhere" title="Lorum ipsum dolor sit amet"></a> Settings </li>
 	<li> <a href="#nowhere" title="Lorum ipsum dolor sit amet"></a> My Profile </li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>
+
+
 	
 </div>
 <!-- embed google map -->
@@ -53,5 +69,8 @@
 
 </div>
 </div>
+<!-- Placed at the end of the document so the pages load faster -->
+        <script src="jquery/jquery-2.1.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
